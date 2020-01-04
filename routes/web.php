@@ -14,3 +14,9 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+Route::get('/', 'ItemController@index');
+
+Route::post('/', 'ItemController@store');
+Route::delete('/{item}', 'ItemController@destroy');
