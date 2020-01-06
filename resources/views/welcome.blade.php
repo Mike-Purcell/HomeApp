@@ -85,6 +85,7 @@
             .list .submit {
                 text-align: center;
                 border-top: #ccc 1px solid;
+                padding: 0.5rem;
             }
 
             .list .submit input {
@@ -92,6 +93,10 @@
                 border: none;
                 border-radius: 5px;
                 padding: 0.5rem;
+            }
+
+            .list .btn button {
+                margin-bottom: 1rem;
             }
 
             .list .items {
@@ -142,7 +147,7 @@
                             <form method="POST" action="/{{ $item->id }}">
                                 @csrf
                                 @method('DELETE')
-                                <button type="submit" name="delete">Delete</button>
+                                <button type="submit" name="delete" class="btn">Delete</button>
                             </form>
                         </div>
                     @empty
@@ -155,9 +160,28 @@
                         <label for="description"><h3>Description</h3></label>
                         <input type="text" name="description">
                     </div>
-                    <div>
+                    <div class="btn">
                         <button type="submit">Add Item</button>
                     </div>
+                </form>
+                <form method="POST" action="/contact">
+                    @csrf
+                    <div class="submit">
+                        <label for="email">Email Address</label>
+                        <input type="text" name="email">
+                        @error('email')
+                        <div>{{ $message }}</div>
+                        @enderror
+                    </div>
+                    @if(session('message'))
+                        <div>
+                            {{ session('message') }}
+                        </div>
+                    @endif
+                    <div class="btn">
+                        <button class="btn">Send E-mail</button>
+                    </div>
+
                 </form>
             </div>
             <div class="weather">
