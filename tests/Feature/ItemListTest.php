@@ -41,4 +41,19 @@ class ItemListTest extends TestCase
 
     //     $this->assertDatabseMissing('items', $item->only((int) 'id'));
     // }
+    
+    /** @test */
+    public function a_user_can_email_the_shopping_list()
+    {
+        $this->withoutExceptionHandling();
+        //Given I have items in the database
+        $item = factory('App\Item', 5)->create();
+
+        $this->asssertDatabaseHas('items', $item);
+        //When I submit a an email request 
+        $this->get('/')->
+
+        //Then assert ashopping list is e-mailed to the "request" email address
+
+    }
 }
