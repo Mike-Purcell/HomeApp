@@ -11,27 +11,16 @@ use App\Item;
 class Contact extends Mailable
 {
     use Queueable, SerializesModels;
-
+    
+    public $items
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct($items)
     {
-        //
-    }
-
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
-    {
-        $item = Item::all();
-
-        return view('contact', compact('item'));
+        $this->items = Item::all();
     }
 
     /**

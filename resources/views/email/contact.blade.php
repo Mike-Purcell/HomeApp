@@ -3,7 +3,7 @@
 
 The body of your message.
 
-@foreach ($item as $item)
+@foreach ($items as $item)
     <li>{{ $item->description }}</li>
 @endforeach
 
