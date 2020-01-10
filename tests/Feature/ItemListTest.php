@@ -51,7 +51,7 @@ class ItemListTest extends TestCase
 
         $this->asssertDatabaseHas('items', $item);
         //When I submit a an email request 
-        $this->get('/')->
+        $this->post('/contact')->;
 
         //Then assert ashopping list is e-mailed to the "request" email address
 
