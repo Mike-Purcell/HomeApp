@@ -16,6 +16,12 @@
                 padding: 0;
             }
 
+            body {
+                background: #404267;
+                font-family: Nunito, sans-serif;
+                color: #e4e4ef;
+            }
+
             a {
                 text-decoration: none;
                 color: #e4e4ef;
@@ -47,20 +53,8 @@
                 background: #f07878;
             }
             
-            /* Main Body */
-            .container {
-                display: grid;
-                grid-template-areas: 
-                    'header header header'
-                    'calendar calendar list'
-                    'weather links list';
-                background: #404267;
-                font-family: Nunito, sans-serif;
-                color: #e4e4ef;
-            }
             /* Header */
             .header {
-                grid-area: header;
                 height: 5vh;
                 border-bottom: #ccc 1px solid;
                 background: #201e45;
@@ -68,16 +62,28 @@
                 color: #f9faf5;
             }
 
+            /* Main Body */
+            .container {
+                display: grid;
+                grid-template-columns: repeat(4, auto);
+                grid-template-rows: repeat(4, auto);
+                padding-left: 1rem;
+                height: 95vh;
+            }
+
+
             /* Calendar*/
             .calendar {
-                grid-area: calendar;
-                height: 60vh;
+                grid-column: 1 / span 3;
+                grid-row: 1 / span 2;
+                /*height: 60vh;*/
                 border-bottom: #ccc 1px solid;
             }
 
             /* List*/
             .list {
-                grid-area: list;
+                grid-column: 4 / span 1;
+                grid-row: 1 / span 3;
                 border-left: #ccc 1px solid;
                 padding: 0.5rem;
             }
@@ -111,23 +117,27 @@
 
             /* Weather */
             .weather {
-                grid-area: weather;
-                height: 35vh;
+                grid-column: 1 / span 2;
+                grid-row: 3 / span 1;
+                /*height: 35vh;*/
                 border-right: #ccc 1px solid;
             }
 
             /* Links*/
             .links {
-                grid-area: links;
-                height: 35vh;
+                grid-column: 3 / span 1;
+                grid-row: 3 / span 1;
+                /*height: 35vh;*/
                 text-align: center;
             }
         </style>
             
     </head>
     <body>
+        <!-- Header -->
+        <nav class="header">Home App</nav> 
         <div class="container">
-            <div class="header">Home App</div> 
+            <!--  -->
             <div class="calendar">
                 <h2>Calendar</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod

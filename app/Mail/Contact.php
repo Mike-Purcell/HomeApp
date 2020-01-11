@@ -12,15 +12,16 @@ class Contact extends Mailable
 {
     use Queueable, SerializesModels;
     
-    public $items;
+    // public $items;
+    
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct(Item $items)
+    public function __construct($items)
     {
-        $this->items = Item::all();
+        $items = Item::all();
     }
 
     /**

@@ -8,13 +8,6 @@ use Illuminate\Support\Facades\Mail;
 
 class ContactController extends Controller
 {
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function storeemail(Request $request)
     {
         $email = request()->validate(['email' => 'required|email']);
