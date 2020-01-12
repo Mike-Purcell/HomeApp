@@ -65,9 +65,8 @@
             /* Main Body */
             .container {
                 display: grid;
-                grid-template-columns: repeat(4, auto);
-                grid-template-rows: repeat(4, auto);
-                padding-left: 1rem;
+                grid-template-columns: repeat(auto-fit);
+                grid-template-rows: repeat(auto-fit);
                 height: 95vh;
             }
 
@@ -76,8 +75,8 @@
             .calendar {
                 grid-column: 1 / span 3;
                 grid-row: 1 / span 2;
-                /*height: 60vh;*/
                 border-bottom: #ccc 1px solid;
+                padding: 0 1rem; 
             }
 
             /* List*/
@@ -85,7 +84,6 @@
                 grid-column: 4 / span 1;
                 grid-row: 1 / span 3;
                 border-left: #ccc 1px solid;
-                padding: 0.5rem;
             }
 
             .list .submit {
@@ -102,11 +100,11 @@
             }
 
             .list .btn button {
-                margin-bottom: 1rem;
+                margin: 1rem;
             }
 
             .list .items {
-                padding-bottom: 1rem;
+                padding: 0.5rem;
                 font-size: 0.75rem;
             }
 
@@ -119,7 +117,6 @@
             .weather {
                 grid-column: 1 / span 2;
                 grid-row: 3 / span 1;
-                /*height: 35vh;*/
                 border-right: #ccc 1px solid;
             }
 
@@ -127,7 +124,6 @@
             .links {
                 grid-column: 3 / span 1;
                 grid-row: 3 / span 1;
-                /*height: 35vh;*/
                 text-align: center;
             }
         </style>
