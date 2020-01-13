@@ -19,7 +19,7 @@ class Contact extends Mailable
      *
      * @return void
      */
-    public function __construct($items)
+    public function __construct()
     {
         $this->items = Item::all();
     }

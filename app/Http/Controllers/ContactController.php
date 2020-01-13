@@ -13,7 +13,7 @@ class ContactController extends Controller
         $email = request()->validate(['email' => 'required|email']);
 
         Mail::to(request('email'))
-            ->send(new Contact());
+            ->send(new Contact('items'));
         
         return redirect('/')
             ->with('message', 'Email Sent');

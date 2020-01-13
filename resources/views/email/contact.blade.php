@@ -4,7 +4,7 @@
 The body of your message.
 
 @foreach ($items as $item)
-    <li>{{ $item->description }}</li>
+    {{ $item->id }}. {{ $item->description }}
 @endforeach
 
 Thanks,<br>
