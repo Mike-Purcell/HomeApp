@@ -4,7 +4,10 @@
 The body of your message.
 
 @foreach ($items as $item)
-    {{ $item->id }}. {{ $item->description }}
+<div>
+  <input type="checkbox" id="item" name="item">
+  <label for="item">{{ $item->description }}</label>
+</div>
 @endforeach
 
 Thanks,<br>
