@@ -21,4 +21,4 @@ Route::post('/', 'ItemController@store');
 Route::delete('/{item}', 'ItemController@destroy');
 
 
-Route::post('/contact', 'ContactController@storeemail');
+Route::post('/contact', 'ContactController@sendemail');

@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Mail;
 
 class ContactController extends Controller
 {
-    public function storeemail(Request $request)
+    public function sendemail(Request $request)
     {
         $email = request()->validate(['email' => 'required|email']);
 
