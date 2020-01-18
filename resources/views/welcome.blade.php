@@ -7,133 +7,16 @@
         <title>Home App</title>
 
         <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
-
+        <link rel="stylesheet" type="text/css" href="css/app.css">
         <!-- Styles -->
-        <style>
-            * {
-                margin: 0;
-                padding: 0;
-            }
-
-            body {
-                background: #404267;
-                font-family: Nunito, sans-serif;
-                color: #e4e4ef;
-            }
-
-            a {
-                text-decoration: none;
-                color: #e4e4ef;
-            }
-
-            a:hover {
-                color: #f07878;
-                cursor: pointer;
-            }
-
-            h2 {
-                text-align: center;
-                font-weight: 100;
-            }
-
-            h3 {
-                text-align: center;
-                font-weight: 100;
-            }
-
-            button {
-                border: none;
-                padding: 0.25rem;
-                border-radius: 50px;
-            }
-
-            button:hover {
-                cursor: pointer;
-                background: #f07878;
-            }
-            
-            /* Header */
-            .header {
-                height: 5vh;
-                border-bottom: #ccc 1px solid;
-                background: #201e45;
-                font-size: 2rem;
-                color: #f9faf5;
-            }
-
-            /* Main Body */
-            .container {
-                display: grid;
-                grid-template-columns: repeat(auto-fit);
-                grid-template-rows: repeat(auto-fit);
-                height: 95vh;
-            }
-
-
-            /* Calendar*/
-            .calendar {
-                grid-column: 1 / span 3;
-                grid-row: 1 / span 2;
-                border-bottom: #ccc 1px solid;
-                padding: 0 1rem; 
-            }
-
-            /* List*/
-            .list {
-                grid-column: 4 / span 1;
-                grid-row: 1 / span 3;
-                border-left: #ccc 1px solid;
-            }
-
-            .list .submit {
-                text-align: center;
-                border-top: #ccc 1px solid;
-                padding: 0.5rem;
-            }
-
-            .list .submit input {
-                width: 90%;
-                border: none;
-                border-radius: 5px;
-                padding: 0.5rem;
-            }
-
-            .list .btn button {
-                margin: 1rem;
-            }
-
-            .list .items {
-                padding: 0.5rem;
-                font-size: 0.75rem;
-            }
-
-            .list .items div {
-                padding: 0.2rem;
-            }    
-
-
-            /* Weather */
-            .weather {
-                grid-column: 1 / span 2;
-                grid-row: 3 / span 1;
-                border-right: #ccc 1px solid;
-            }
-
-            /* Links*/
-            .links {
-                grid-column: 3 / span 1;
-                grid-row: 3 / span 1;
-                text-align: center;
-            }
-        </style>
             
     </head>
     <body>
         <!-- Header -->
-        <nav class="header">Home App</nav> 
+        <nav class="nav"><h1>Home App</h1></nav> 
+        <!-- Main Boduy -->
         <div class="container">
-            <!--  -->
+            <!-- Calendar -->
             <div class="calendar">
                 <h2>Calendar</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -160,20 +43,20 @@
                         Nothing on the list yet!
                     @endforelse
                 </div>
-                <form method="POST" action="/">
+                <form method="POST" action="/" class="submit-item">
                     @csrf
-                    <div class="submit">
-                        <label for="description"><h3>Description</h3></label>
-                        <input type="text" name="description">
-                    </div>
-                    <div class="btn">
-                        <button type="submit">Add Item</button>
-                    </div>
+                        <div>    
+                            <label for="description"><h3>Description</h3></label>
+                            <input type="text" name="description">
+                        </div>
+                        <div>
+                            <button type="submit">Add Item</button>
+                        </div>
                 </form>
-                <form method="POST" action="/contact">
+                <form method="POST" action="/contact"  class="submit-email">
                     @csrf
-                    <div class="submit">
-                        <label for="email">Email Address</label>
+                    <div>
+                        <label for="email"><h3>Email Address</h3></label>
                         <input type="text" name="email">
                         @error('email')
                         <div>{{ $message }}</div>
@@ -184,8 +67,8 @@
                             {{ session('message') }}
                         </div>
                     @endif
-                    <div class="btn">
-                        <button class="btn">Send E-mail</button>
+                    <div>
+                        <button>Send E-mail</button>
                     </div>
 
                 </form>
