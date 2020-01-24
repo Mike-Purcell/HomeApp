@@ -2602,8 +2602,8 @@ fieldset[disabled] .button.is-link.is-inverted.is-outlined {
 }
 
 .button.is-link.is-light {
-  background-color: #eef5fc;
-  color: #1e6dae;
+  background-color: #b1d7fc;
+  color: #3490dc;
 }
 
 .button.is-link.is-light:hover,
@@ -5895,6 +5895,7 @@ fieldset[disabled] .select select:hover {
 
 .label.is-small {
   font-size: 0.75rem;
+  padding-top: 0.5rem;
 }
 
 .label.is-medium {

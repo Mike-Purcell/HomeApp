@@ -86,8 +86,8 @@
                                 <i class="fas fa-shopping-cart"></i>
                             </div>
                           </div>
-                            <div>
-                                <button type="submit">Add Item</button>
+                            <div class="control">
+                                <button type="submit" class="button is-small is-link is-light is-rounded">Add Item</button>
                             </div>
                     </form>
                     <form method="POST" action="/contact">
@@ -109,12 +109,10 @@
                                 {{ session('message') }}
                             </div>
                         @endif
-                        <div>
-                            <button>Send E-mail</button>
+                        <div class="control">
+                            <button class="button is-small is-link is-light is-rounded">Send E-mail</button>
                         </div>
-
                     </form>
-    
                 </div>    
             </div>
         </div>
