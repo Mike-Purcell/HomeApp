@@ -32,7 +32,7 @@
                     </div>
                     <div class="tile is-parent">
                         <!-- Weather -->
-                        <div class="tile is-parent is-vertical box">
+                        <div class="tile is-parent is-vertical is-8 box">
                             <div>
                                 <h2 class="subtitle">Weather</h2>
                             </div>
@@ -43,15 +43,17 @@
                         <!-- Links -->
                         <div class="tile is-parent is-vertical box">
                             <h2 class="subtitle">Links</h2>
-                            <div>
-                                <a href="https://laravel.com/docs">Docs</a>
-                                <a href="https://laracasts.com">Laracasts</a>
-                                <a href="https://laravel-news.com">News</a>
-                                <a href="https://blog.laravel.com">Blog</a>
-                                <a href="https://nova.laravel.com">Nova</a>
-                                <a href="https://forge.laravel.com">Forge</a>
-                                <a href="https://vapor.laravel.com">Vapor</a>
-                                <a href="https://github.com/laravel/laravel">GitHub</a>
+                            <div class="content">
+                                <ol type="1">
+                                    <li><a href="https://laravel.com/docs">Docs</a></li>
+                                    <li><a href="https://laracasts.com">Laracasts</a></li>
+                                    <li><a href="https://laravel-news.com">News</a></li>
+                                    <li><a href="https://blog.laravel.com">Blog</a></li>
+                                    <li><a href="https://nova.laravel.com">Nova</a></li>
+                                    <li><a href="https://forge.laravel.com">Forge</a></li>
+                                    <li><a href="https://vapor.laravel.com">Vapor</a></li>
+                                    <li><a href="https://github.com/laravel/laravel">GitHub</a></li>
+                                </ol>
                             </div>
                         </div>
                     </div>
@@ -62,11 +64,11 @@
                     <div class="list">
                         @forelse ($item as $item)
                             <div>
-                                <div class="list-item">{{ $item->description }}                          
+                                <div class="list-item">{{ $item->description }}
                                 <form method="POST" action="/{{ $item->id }}">
                                     @csrf
                                     @method('DELETE')
-                                    <button type="submit" name="delete" class="button is-small">Delete</button>
+                                    <button type="submit" name="delete" class="delete is-light is-small is-rounded"></button>
                                 </form>
                                 </div>
                             </div>
@@ -91,9 +93,9 @@
                     <form method="POST" action="/contact">
                         @csrf
                         <div class="field">
-                            <label class="label is-small">Email Address</label>
+                            <label for="email" class="label is-small">Email Address</label>
                             <div class="control has-icons-left">
-                              <input class="input is-small is-info is-rounded" type="email" placeholder="Email">
+                              <input name="email" class="input is-small is-info is-rounded" type="email" placeholder="Email">
                               <span class="icon is-small is-left">
                                 <i class="fas fa-envelope"></i>
                               </span>

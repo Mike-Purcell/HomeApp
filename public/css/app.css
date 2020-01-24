@@ -258,7 +258,7 @@
   display: -webkit-inline-box;
   display: inline-flex;
   font-size: 0.75rem;
-  height: 2.5em;
+  height: 2rem;
   -webkit-box-pack: start;
           justify-content: flex-start;
   line-height: 1.5;
@@ -1759,8 +1759,8 @@ a.box:active {
   -webkit-box-pack: center;
           justify-content: center;
   padding-bottom: 0.5rem;
-  padding-left: 1em;
-  padding-right: 1em;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
   padding-top: 0.5rem;
   text-align: center;
   white-space: nowrap;
@@ -3467,8 +3467,9 @@ fieldset[disabled] .button {
 
 .content ol {
   list-style-position: outside;
-  margin-left: 2em;
-  margin-top: 1em;
+  margin-left: 1rem;
+  margin-top: 0em;
+  
 }
 
 .content ol:not([type]) {
@@ -6664,7 +6665,7 @@ button.dropdown-item.is-active {
 
 .list-item {
   display: inline-flex;
-  padding: 0.5em 1em;
+  padding: 0.5em;
   font-size: 0.75rem;
 }
 
