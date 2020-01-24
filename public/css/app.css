@@ -3351,6 +3351,7 @@ fieldset[disabled] .button {
           flex-grow: 1;
   margin: 0 auto;
   position: relative;
+  top: 10px;
   width: auto;
 }
 

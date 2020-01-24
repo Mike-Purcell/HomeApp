@@ -20,7 +20,7 @@
         <!-- Main Body -->
         <div class="container">
             <div class="tile is-ancestor">
-                <div class="tile is-parent is-vertical box is-10">
+                <div class="tile is-parent is-vertical box is-10 has-background-grey-light">
                     <!-- Calendar -->
                     <div class="tile is-parent is-vertical box">
                         <div>
@@ -56,8 +56,8 @@
                         </div>
                     </div>
                 </div>
-                <!-- Shopping Lisst -->
-                <div class="tile is-parent is-vertical box">
+                <!-- Shopping List -->
+                <div class="tile is-parent is-vertical has-background-grey-light box">
                     <h2 class="subtitle">Shopping List</h2>
                         @forelse ($item as $item)
                             <div class="is-lower-roman">
@@ -66,11 +66,11 @@
                                     @csrf
                                     @method('DELETE')
                                     <button type="submit" name="delete" class="btn">Delete</button>
-                                </form>
+                                </form> -->
                             </div>
                         @empty
                             Nothing on the list yet!
-                        @endforelse
+                        @endforelse -->
                     
                     <form method="POST" action="/">
                         @csrf
@@ -100,7 +100,7 @@
                             @enderror
                             </div>
                         </div>
-                        <@if(session('message'))
+                        @if(session('message'))
                             <div>
                                 {{ session('message') }}
                             </div>
