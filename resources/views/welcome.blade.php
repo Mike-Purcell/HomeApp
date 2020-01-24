@@ -59,19 +59,21 @@
                 <!-- Shopping List -->
                 <div class="tile is-parent is-vertical has-background-grey-light box">
                     <h2 class="subtitle">Shopping List</h2>
+                    <div class="list">
                         @forelse ($item as $item)
-                            <div class="is-lower-roman">
-                                {{ $item->id }}. {{ $item->description }}
+                            <div>
+                                <div class="list-item">{{ $item->description }}                          
                                 <form method="POST" action="/{{ $item->id }}">
                                     @csrf
                                     @method('DELETE')
-                                    <button type="submit" name="delete" class="btn">Delete</button>
-                                </form> -->
+                                    <button type="submit" name="delete" class="button is-small">Delete</button>
+                                </form>
+                                </div>
                             </div>
                         @empty
                             Nothing on the list yet!
-                        @endforelse -->
-                    
+                        @endforelse
+                    </div>                    
                     <form method="POST" action="/">
                         @csrf
                         <div class="field">

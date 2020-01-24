@@ -257,7 +257,7 @@
   box-shadow: none;
   display: -webkit-inline-box;
   display: inline-flex;
-  font-size: 1rem;
+  font-size: 0.75rem;
   height: 2.5em;
   -webkit-box-pack: start;
           justify-content: flex-start;
@@ -1758,10 +1758,10 @@ a.box:active {
   cursor: pointer;
   -webkit-box-pack: center;
           justify-content: center;
-  padding-bottom: calc(0.5em - 1px);
+  padding-bottom: 0.5rem;
   padding-left: 1em;
   padding-right: 1em;
-  padding-top: calc(0.5em - 1px);
+  padding-top: 0.5rem;
   text-align: center;
   white-space: nowrap;
 }
@@ -3393,7 +3393,7 @@ fieldset[disabled] .button {
 }
 
 .content li + li {
-  margin-top: 0.25em;
+  margin-top: 0;
 }
 
 .content p:not(:last-child),
@@ -6663,8 +6663,9 @@ button.dropdown-item.is-active {
 }
 
 .list-item {
-  display: block;
+  display: inline-flex;
   padding: 0.5em 1em;
+  font-size: 0.75rem;
 }
 
 .list-item:not(a) {
